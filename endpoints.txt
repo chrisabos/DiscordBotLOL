@@ -1,0 +1,23 @@
+Endpoints
+
+runes
+https://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/runesReforged.json
+https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7204_Resolve.png
+
+summoner spells
+https://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/summoner.json
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/spell/{id}.png
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/spell/SummonerFlash.png
+
+items
+https://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/item.json
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/item/{num}.png
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/item/3136.png
+
+profile icons
+https://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/profileicon.json
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/profileicon/{id}.png
+https://ddragon.leagueoflegends.com/cdn/10.11.1/img/profileicon/2.png
+
+queues
+http://static.developer.riotgames.com/docs/lol/queues.json

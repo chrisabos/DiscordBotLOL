@@ -1,12 +1,13 @@
 const https = require('https');
 
 const config = require('./config.json');
+const assets = require('./assets.js');
 const cache = require('./cache.js');
 
 function getQueueByID(id) {
     var ret = undefined;
 
-    queues.some((q) => {
+    assets.queues.some((q) => {
         if(q.queueId === id) {
             ret = q;
             return true;

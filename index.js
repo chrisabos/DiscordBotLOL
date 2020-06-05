@@ -4,11 +4,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const config = require('./config.json');
+const assets = require('./assets.js');
 const cache = require('./cache.js');
 const riot = require('./riot_api_wrapper.js');
-
-var champions = undefined;
-var queues = undefined;
 
 var commands = new Discord.Collection();
 
@@ -22,18 +20,18 @@ for (const file of commandFiles) {
 
 function load(callback) {
 	riot.httpsGet('https://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/champion.json', (c) => {
-		champions = JSON.parse(c);
-		champions.ids = [];
+		assets.champions = JSON.parse(c);
+		assets.champions.ids = [];
 
-		for (var name in champions.data) {
-			var champ = champions.data[name]
-			champions.ids[parseInt(champ.key)] = champ;
+		for (var name in assets.champions.data) {
+			var champ = assets.champions.data[name]
+			assets.champions.ids[parseInt(champ.key)] = champ;
 		}
 
 		//console.log(champions.ids);
 
 		riot.httpsGet('https://static.developer.riotgames.com/docs/lol/queues.json', (data) => {
-			queues = JSON.parse(data);
+			assets.queues = JSON.parse(data);
 			callback();
 		})
 	});
